@@ -1,0 +1,39 @@
+body {
+  background: black;
+}
+
+div {
+  text-align: center;
+}
+
+h1 {
+  color: white;
+}
+
+button {
+  height: 2.2em;
+  width: 5.5em;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.start-btn {
+  background: green;
+}
+
+.pause-btn {
+  background: grey;
+}
+
+.hide-btn {
+  display: none;
+}
+
+.show-btn {
+  display: block;
+}
+
+.stop-btn {
+  background: red;
+}
