@@ -31,8 +31,7 @@ function twoDigits(digit) {
 
 function start() {
   watch();
-  // interval = setInterval(watch, 1000);
-  interval = setInterval(watch, 100);
+  interval = setInterval(watch, 1000);
   start_btn.setAttribute('style', 'display: none');
   pause_btn.removeAttribute('style', 'display: none');
 }
