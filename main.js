@@ -70,6 +70,8 @@ function watch() {
       // passa os segundos para 59
       seconds = 59;
     }else{ 
+      alert("Acabou o Tempo!")
+      document.getElementById('sound').play();
       stop();
     }
   }
