@@ -10,12 +10,22 @@ h1 {
   color: white;
 }
 
+input[type=number] {
+  background: black;
+  color: white;
+  outline: none;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
+  appearance: textfield;
+}
+
 button {
   height: 2.2em;
   width: 5.5em;
-  border: none;
   color: white;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .start-btn {

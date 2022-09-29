@@ -7,7 +7,7 @@ var interval;
 var start_btn = document.querySelector('.start-btn');
 var pause_btn = document.querySelector('.pause-btn');
 
-document.body.addEventListener('keypress', function (event) {
+document.body.addEventListener('keypress', (event) => {
   const key = event.key;
   const code = event.keyCode;
   console.log(`Key: ${key}, Code ${code}`);
@@ -47,18 +47,28 @@ function stop() {
   document.getElementById('watch').innerText = '00:00:00';
   pause_btn.setAttribute('style', 'display: none');
   start_btn.removeAttribute('style', 'display: none');
-  setInterval(location.reload(), 2000);
+  location.reload();
 }
 
 function watch() {
+  // diminui um segundo
   seconds--;
+  // se segundos for menor ou igual a zero 
   if(seconds <= 0){
+    // se minutos foi maior que zero
     if(minutes > 0){
+      // diminui um minuto
       minutes--;
+      // e passa os segundos para 59
       seconds = 59;
-    }else if(minutes <= 0) {
+    // também se horas for menor ou igual a zero  
+    }else if (hours > 0) {
+      // subtrai uma hora 
       hours--;
+      // passa os minutos para 59
       minutes = 59;
+      // passa os segundos para 59
+      seconds = 59;
     }else{ 
       stop();
     }

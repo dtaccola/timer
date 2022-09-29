@@ -5,17 +5,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Document</title>
+  <title>Contador regressivo</title>
 </head>
 <body>
-  <div>
-    <input type="number" min="0" id="hours">
-    <input type="number" min="0" id="minutes">
-    <input type="number" min="0" id="seconds">
+  <div class="container">
+    <div class="inputs">  
+      <input type="number" min="0" id="hours" onfocus="this.value='';" placeholder="H">
+      <input type="number" min="0" id="minutes" onfocus="this.value='';" placeholder="M">
+      <input type="number" min="0" id="seconds" onfocus="this.value='';" placeholder="S">
+    </div>
+    
     <h1 id="watch">00:00:00</h1>
-    <button class="start-btn" onclick="start();">Iniciar</button>
-    <button class="pause-btn" onclick="pause();" style="display: none;">Pausar</button>
-    <button class="stop-btn" onclick="stop()">Parar</button>
+
+    <div class="buttons">
+      <button class="start-btn" onclick="start();">Iniciar</button>
+      <button class="pause-btn" onclick="pause();" style="display: none;">Pausar</button>
+      <button class="stop-btn" onclick="stop()">Parar</button>
+    </div>
   </div>
   <script src="main.js"></script>
 </body>
