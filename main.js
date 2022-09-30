@@ -69,9 +69,10 @@ function watch() {
       minutes = 59;
       // passa os segundos para 59
       seconds = 59;
-    }else{ 
-      alert("Acabou o Tempo!")
+    }else if(seconds == 0 && minutes == 0 && hours == 0) {
       document.getElementById('sound').play();
+    }
+    else{ 
       stop();
     }
   }
