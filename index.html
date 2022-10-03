@@ -11,13 +11,13 @@
   <audio id="sound" src="media/alarm.wav" style="display: none;"></audio>
   <div class="container">
     <div class="inputs">  
-      <input type="number" min="0" id="hours" onfocus="this.value='';" placeholder="H">
-      <input type="number" min="0" id="minutes" onfocus="this.value='';" placeholder="M">
-      <input type="number" min="0" id="seconds" onfocus="this.value='';" placeholder="S">
+      <div class="number2-wrapper">
+        <input type="number" min="0" max="99" onfocus="this.value='';" id="hours" placeholder="H">
+        <input type="number" min="0" max="59" onfocus="this.value='';" id="minutes" placeholder="M">
+        <input type="number" min="0" max="59" onfocus="this.value='';" id="seconds" placeholder="S">
+      </div>
     </div>
-    
     <h1 id="watch">00:00:00</h1>
-
     <div class="buttons">
       <button class="start-btn" onclick="start();">Iniciar</button>
       <button class="pause-btn" onclick="pause();" style="display: none;">Pausar</button>
