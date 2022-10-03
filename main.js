@@ -59,6 +59,8 @@ function watch() {
 function twoDigits(digit) {
   if(digit < 10){
     return('0' + digit);
+  }else if (digit < '' || digit == 0) {
+    return(digit = 0);
   }else{
     return(digit);
   }
