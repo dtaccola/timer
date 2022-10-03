@@ -8,6 +8,8 @@ var interval;
 var start_btn = document.querySelector('.start-btn');
 var pause_btn = document.querySelector('.pause-btn');
 
+var display = document.getElementById('watch');
+
 
 document.body.addEventListener('keypress', (event) => {
   const key = event.key;
@@ -52,24 +54,31 @@ function watch() {
     }
   }
 
-  document.getElementById('watch').innerText = twoDigits(hours) + ':' + twoDigits(minutes) + ':' + twoDigits(seconds);
+  display.innerText = twoDigits(hours) + ':' + twoDigits(minutes) + ':' + twoDigits(seconds);
 
 }
 
 function twoDigits(digit) {
   if(digit < 10){
     return('0' + digit);
-  }else if (digit < '' || digit == 0) {
-    return(digit = 0);
   }else{
     return(digit);
   }
 }
 
 function start() {
-  seconds = document.querySelector('#seconds').value;
-  minutes = document.querySelector('#minutes').value;
   hours = document.querySelector('#hours').value;
+  minutes = document.querySelector('#minutes').value;
+  seconds = document.querySelector('#seconds').value;
+  if(hours == ''){
+    hours = 0;
+  }
+  if(minutes == ''){
+    minutes = 0;
+  }
+  if(seconds == ''){
+    seconds = 0;
+  }
   watch();
   interval = setInterval(watch, 1000);
   start_btn.setAttribute('style', 'display: none');
