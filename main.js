@@ -8,9 +8,8 @@ var interval;
 var start_btn = document.querySelector('.start-btn');
 var pause_btn = document.querySelector('.pause-btn');
 
-var buttons = document.querySelector('.buttons');
 
-buttons.addEventListener('keypress', (event) => {
+document.body.addEventListener('keypress', (event) => {
   const key = event.key;
   const code = event.keyCode;
   console.log(`Key: ${key}, Code ${code}`);
