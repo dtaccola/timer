@@ -82,9 +82,13 @@ function pause() {
 
 function stop() {
   clearInterval(interval);
+  seconds = 0;
+  minutes = 0;
+  hours = 0;
   document.getElementById('watch').innerText = '00:00:00';
   pause_btn.setAttribute('style', 'display: none');
   start_btn.removeAttribute('style', 'display: none');
-  location.reload();
+
+  // location.reload();
 }
 
